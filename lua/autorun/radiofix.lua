@@ -9,14 +9,14 @@ hook.Add( "TTTPrepareRound", "SpecCalloutOverride", function()
 		local tab = util.GetPlayerTrace( LocalPlayer() )
 
 		 tab.filter = function(ent)
-										if ent:IsPlayer() and ent:IsSpec() then
-												return false
-										elseif ent == LocalPlayer() then
-												return false
-										else
-											return true
-										end
-									end
+							if ent:IsPlayer() and ent:IsSpec() then
+									return false
+							elseif ent == LocalPlayer() then
+									return false
+							else
+								return true
+							end
+						end
 
 		 local trace = util.TraceLine(tab)
 
